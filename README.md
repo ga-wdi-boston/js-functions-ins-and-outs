@@ -106,6 +106,11 @@ var mergeConfig = function mergeConfig() {
 var createAdder = function createAdder() {
 
 };
+
+var createPerson = function createPerson(givenName, surname, dob, height, weight, eyeColor) {
+
+};
+
 ```
 
 ## Additional Resources
