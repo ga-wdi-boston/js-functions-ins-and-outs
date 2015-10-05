@@ -108,6 +108,12 @@ var createAdder = function createAdder() {
 };
 ```
 
+## Additional Resources
+
+- [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+- [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+
 ## Assessment
 
 Please follow the instructions at https://github.com/ga-wdi-boston/js-functions-ins-and-outs-assessment
