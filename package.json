@@ -1,0 +1,41 @@
+{
+  "name": "js-functions-ins-and-outs",
+  "version": "0.0.1",
+  "description": "JavaScript function argument and return values",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "Antony Donovan",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-istanbul": "^0.6.1",
+    "grunt-jasmine-nodejs": "^1.4.0",
+    "grunt-jsbeautifier": "^0.2.10",
+    "grunt-jscs": "^2.1.0",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-node-inspector": "^0.3.0",
+    "grunt-nodemon": "^0.4.0",
+    "grunt-open": "^0.2.3",
+    "grunt-plato": "^1.2.1",
+    "load-grunt-config": "^0.17.1",
+    "time-grunt": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga-wdi-boston/js-functions-ins-and-outs.git"
+  },
+  "keywords": [
+    "collections",
+    "functions",
+    "node",
+    "grunt"
+  ],
+  "bugs": {
+    "url": "https://github.com/ga-wdi-boston/js-functions-ins-and-outs/issues"
+  },
+  "homepage": "https://github.com/ga-wdi-boston/js-functions-ins-and-outs#readme"
+}
