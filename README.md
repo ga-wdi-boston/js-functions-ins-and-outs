@@ -8,7 +8,7 @@
 
 ## Reading
 
-These reading are to help familiarize you with the subject matter.  You are not expected to follow all of descriptions. Please skip over `ES6` and/or `ECMAScript 6` portions of the documentation.
+These readings are to help familiarize you with the subject matter.  You are not expected to follow all of descriptions. Please skip over `ES6` and/or `ECMAScript 6` portions of the documentation.
 
 - MDN Glossary entry for
  [Array](https://developer.mozilla.org/en-US/docs/Glossary/array)
@@ -76,7 +76,11 @@ var aryTimes2 = function aryTimes2() {
 var addProperty = function addProperty() {
 
 };
+```
 
+Functions are valid arguments.
+
+```js
 var transform = function transform(value, predicate, mutator) {
 
 };
