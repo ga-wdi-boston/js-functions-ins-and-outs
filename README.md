@@ -27,9 +27,9 @@ JavaScript function argument and return values
 By the end of this lesson, students should be able to:
 
 - Create and invoke functions that take an arbitrary number of arguments
-- Create and invoke functions that return objects
 - Create and invoke functions that take object as arguments
 - Create and invoke functions that take functions as arguments
+- Create and invoke functions that return objects
 
 ## "Ins & Outs"
 
@@ -51,7 +51,7 @@ var product = function product() {
 ##### Code along
 
 ```js
-var product = function product() {
+var max = function max() {
 
 };
 ```
@@ -62,8 +62,52 @@ Could we accomplish something similar using a single argument?
 
 Reference types passed as arguments can be modified within the functions.
 
+##### Demo
+
+```js
+var aryTimes2 = function aryTimes2() {
+
+};
+```
+
+##### Code along
+
+```js
+var addProperty = function addProperty() {
+
+};
+
+var transform = function transform(value, predicate, mutator) {
+
+};
+```
+
 ### "Outs"
 
 #### Reference types as returns values
 
 Reference type literals returned from functions create new instances of the type.
+
+##### Demo
+
+```js
+var createArray = function createArray() {
+
+};
+```
+
+##### Code along
+
+```js
+var mergeConfig = function mergeConfig() {
+
+};
+
+var createAdder = function createAdder() {
+
+};
+```
+
+## Assessment
+
+Please follow the instructions at https://github.com/ga-wdi-boston/js-functions-ins-and-outs-assessment
