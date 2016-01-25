@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- [JavaScript Basics 2](https://github.com/ga-wdi-boston/js-basics-2)
+- [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
 
 ## Required Reading
 
