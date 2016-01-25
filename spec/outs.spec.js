@@ -1,6 +1,6 @@
 'use strict';
 
-var outs = require('../lib/outs.js');
+const outs = require('../lib/outs.js');
 
 describe('createArray', function() {
 

@@ -1,0 +1,12 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "strict": "global",
+  "undef": true,
+  "sub": true,
+  "esversion": 6,
+  "quotmark": true,
+  "devel": true,
+  "node": true,
+  "jasmine": true
+}

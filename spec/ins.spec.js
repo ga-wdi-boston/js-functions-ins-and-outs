@@ -1,6 +1,6 @@
 'use strict';
 
-var ins = require('../lib/ins.js');
+const ins = require('../lib/ins.js');
 
 describe('product', function() {
 

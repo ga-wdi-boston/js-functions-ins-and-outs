@@ -36,7 +36,7 @@ JavaScript provides a mechanism to handle arguments not in the function definiti
 ##### Demo
 
 ```js
-var product = function product() {
+const product = function product() {
 
 };
 ```
@@ -44,12 +44,16 @@ var product = function product() {
 ##### Code along
 
 ```js
-var max = function max() {
+const max = function max() {
 
 };
 ```
 
 Could we accomplish something similar using a single argument?
+
+##### Lab
+
+Write functions that take an array and return a product or max.
 
 #### Reference types as arguments
 
@@ -58,7 +62,7 @@ Reference types passed as arguments can be modified within the functions.
 ##### Demo
 
 ```js
-var aryTimes2 = function aryTimes2() {
+const arrayTimes2 = function arrayTimes2() {
 
 };
 ```
@@ -66,7 +70,7 @@ var aryTimes2 = function aryTimes2() {
 ##### Code along
 
 ```js
-var addProperty = function addProperty() {
+const addProperty = function addProperty() {
 
 };
 ```
@@ -74,37 +78,49 @@ var addProperty = function addProperty() {
 Functions are valid arguments.
 
 ```js
-var transform = function transform(value, predicate, mutator) {
+const transform = function transform(value, predicate, mutator) {
+
+};
+```
+
+##### Lab
+
+Write a function that takes an array and a function and replaces each element of the array with the result of invoking the function with the existing element.
+
+```js
+const arrayTransform = function arrayTransform() {
 
 };
 ```
 
 ### "Outs"
 
-#### Reference types as returns values
+#### Reference types as returns values.
 
 Reference type literals returned from functions create new instances of the type.
 
-##### Demo
+#### Demo
 
 ```js
-var createArray = function createArray() {
+const createArray = function createArray() {
 
 };
 ```
 
-##### Code along
+#### Code along
 
 ```js
-var mergeConfig = function mergeConfig() {
+const createPerson = function createPerson(givenName, surname, bornOn, height, weight, eyeColor) {
 
 };
+```
 
-var createAdder = function createAdder() {
+#### Demo
 
-};
+Functions returned from functions generate a closure.  Closures provide great utility.
 
-var createPerson = function createPerson(givenName, surname, dob, height, weight, eyeColor) {
+```js
+const counterFactory = function counterFactory() {
 
 };
 
@@ -116,6 +132,7 @@ var createPerson = function createPerson(givenName, surname, dob, height, weight
 - [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 - [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-## Assessment
+## [License](LICENSE)
 
-Please follow the instructions at https://github.com/ga-wdi-boston/js-functions-ins-and-outs-assessment
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
