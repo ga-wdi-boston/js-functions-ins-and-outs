@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
+-   [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
 
 ## Required Reading
 
@@ -18,11 +18,11 @@ JavaScript function argument and return values
 
 By the end of this lesson, students should be able to:
 
-- Create and invoke functions that take an arbitrary number of arguments
-- Create and invoke functions that take objects as arguments
-- Create and invoke functions that return objects
-- Create and invoke functions that take functions as arguments
-- Create and invoke functions that return functions
+-   Create and invoke functions that take an arbitrary number of arguments
+-   Create and invoke functions that take objects as arguments
+-   Create and invoke functions that return objects
+-   Create and invoke functions that take functions as arguments
+-   Create and invoke functions that return functions
 
 ## "Ins & Outs"
 
@@ -30,10 +30,13 @@ By the end of this lesson, students should be able to:
 
 #### Zero or more arguments
 
-JavaScript provides a mechanism to handle arguments not in the function definition: the `arguments` object.  This object is referred to as `array like` and is available within any function.  We'll examine how this object is used by creating some seemingly parameterless functions.
+JavaScript provides a mechanism to handle arguments not in the function
+ definition: the `arguments` object.
+This object is referred to as `array like` and is available within any function.
+We'll examine how this object is used by creating some seemingly parameterless
+ functions.
 
-
-##### Demo
+##### Demo - `arguments`
 
 ```js
 const product = function product() {
@@ -41,7 +44,7 @@ const product = function product() {
 };
 ```
 
-##### Code along
+##### Code along - `arguments`
 
 ```js
 const max = function max() {
@@ -51,7 +54,7 @@ const max = function max() {
 
 Could we accomplish something similar using a single argument?
 
-##### Lab
+##### Lab - single array argument
 
 Write functions that take an array and return a product or max.
 
@@ -59,7 +62,7 @@ Write functions that take an array and return a product or max.
 
 Reference types passed as arguments can be modified within the functions.
 
-##### Demo
+##### Demo - reference type arguments
 
 ```js
 const arrayTimes2 = function arrayTimes2() {
@@ -67,7 +70,7 @@ const arrayTimes2 = function arrayTimes2() {
 };
 ```
 
-##### Code along
+##### Code along - reference type arguments
 
 ```js
 const addProperty = function addProperty() {
@@ -83,9 +86,13 @@ const transform = function transform(value, predicate, mutator) {
 };
 ```
 
-##### Lab
+##### Lab - reference type arguments
 
-Write a function that takes an array and a function and replaces each element of the array with the result of invoking the function with the existing element.
+Write a function that takes an array, a predicate, and a mutator.
+It should replace all elements of the array for which the predicate returns
+ true.
+The replacement value should be the result of invoking the mutator on the
+ existing element.
 
 ```js
 const arrayTransform = function arrayTransform() {
@@ -95,11 +102,12 @@ const arrayTransform = function arrayTransform() {
 
 ### "Outs"
 
-#### Reference types as returns values.
+#### Reference types as returns values
 
-Reference type literals returned from functions create new instances of the type.
+Reference type literals returned from functions create new instances of the
+ type specified.
 
-#### Demo
+##### Demo - return new arrays
 
 ```js
 const createArray = function createArray() {
@@ -107,7 +115,7 @@ const createArray = function createArray() {
 };
 ```
 
-#### Code along
+##### Code along  - return new objects
 
 ```js
 const createPerson = function createPerson(givenName, surname, bornOn, height, weight, eyeColor) {
@@ -115,9 +123,24 @@ const createPerson = function createPerson(givenName, surname, bornOn, height, w
 };
 ```
 
-#### Demo
+#### Functions as returns values
 
-Functions returned from functions generate a closure.  Closures provide great utility.
+Functions returned from functions generate a closure.
+Closures provide great utility.
+
+##### Demo - return new functions
+
+```js
+const memoFactory = function memoFactory() {
+
+};
+
+```
+
+##### Code along - return new functions
+
+Functions returned from functions generate a closure.
+Closures provide great utility.
 
 ```js
 const counterFactory = function counterFactory() {
@@ -128,9 +151,9 @@ const counterFactory = function counterFactory() {
 
 ## Additional Resources
 
-- [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-- [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-- [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+-   [Array slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+-   [Array shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+-   [Function call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
 ## [License](LICENSE)
 
