@@ -1,9 +1,6 @@
 {
   "all": {
-    "src": ["<%= paths.project %>"],
-    "ignore": [
-      "node_modules/"
-    ]
+    "src": ["<%= paths.src.all %>"]
   },
   "options": {
     "jshintrc": true

@@ -1,22 +1,20 @@
 {
+  "options": {
+    "config": ".jscsrc",
+    "esnext": true,
+    "verbose": true
+  },
+
   "status": {
-    "src": ["<%= paths.project %>"],
+    "src": ["<%= paths.src.all %>"],
     "options": {
-      "preset": "airbnb",
-      "requireTrailingComma": null,
-      "validateIndentation": 2,
       "force": true
     }
   },
+
   "write": {
-    "src": ["<%= paths.project %>"],
+    "src": ["<%= paths.src.all %>"],
     "options": {
-      "preset": "airbnb",
-      "requirePaddingNewLinesAfterBlocks": {
-        "allExcept": ["inCallExpressions", "inArrayExpressions", "inProperties"]
-      },
-      "disallowMultipleVarDecl": "exceptUndefined",
-      "validateIndentation": 2,
       "fix": true
     }
   }
