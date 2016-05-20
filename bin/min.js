@@ -9,7 +9,7 @@ const max = function max(){
   let maximum = arguments[0];
 
   for(let i = 1; i < arguments.length; i++){
-    if(arguments[i] > maximum){
+    if(arguments[i] < maximum){
       maximum = arguments[i];
     }
   }
@@ -18,5 +18,4 @@ const max = function max(){
 };
 
 // Test
-
-console.log('max of [1, 3, -2, 45, 2] is: ', max(1,3,-2,45,2));
+console.log(max(1,3,2,45,2));
