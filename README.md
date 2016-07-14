@@ -93,20 +93,6 @@ const transform = function transform(value, predicate, mutator) {
 };
 ```
 
-##### Lab - reference type arguments
-
-Write a function that takes an array, a predicate, and a mutator.
-It should replace all elements of the array for which the predicate returns
- true.
-The replacement value should be the result of invoking the mutator on the
- existing element.
-
-```js
-const arrayTransform = function arrayTransform() {
-
-};
-```
-
 ### "Outs"
 
 #### Reference types as returns values
@@ -118,6 +104,20 @@ Reference type literals returned from functions create new instances of the
 
 ```js
 const createArray = function createArray() {
+
+};
+```
+
+##### Lab - reference types as arguments and return values
+
+Write a function that takes an array, a predicate, and a mutator. It should
+create a new array to hold all of either an existing element in the array or the
+transformed value for that element for which the predicate returns true. The
+replacement value should be the result of invoking the mutator on the existing
+element.
+
+```js
+const arrayTransform = function arrayTransform() {
 
 };
 ```
