@@ -19,7 +19,7 @@ JavaScript function argument and return values
 By the end of this lesson, students should be able to:
 
 -   Create and invoke functions that take an arbitrary number of arguments
--   Create and invoke functions that take objects as arguments
+-   Create and invoke functions that take reference types as arguments
 -   Create and invoke functions that return objects
 -   Create and invoke functions that take functions as arguments
 -   Create and invoke functions that return functions
