@@ -10,6 +10,13 @@
 
 [JavaScript Functions - "Ins & Outs" - Study](https://github.com/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
 
+## Preparation
+
+1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+    this repository.
+1.  Create a new branch, `training`, for your work.
+1.  Install dependencies with `npm install`.
+
 ## Introduction
 
 JavaScript function argument and return values
