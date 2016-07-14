@@ -1,8 +1,0 @@
-{
-  "tests": {
-    "src": ["vendor.bundle.js", "bundle.js"],
-    "options": {
-      "specs": "specs.js"
-    }
-  }
-}

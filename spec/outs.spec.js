@@ -1,27 +1,25 @@
 'use strict';
 
+// Allow chai syntax like `expect(foo).to.be.ok;`
+// jshint -W030
+
+const chai = require('chai');
+const expect = chai.expect;
+
 const outs = require('../lib/outs.js');
 
-describe('createArray', function() {
+describe('createArray', function () {
 
-  it('returns 1 when called without arguments', function() {
-    expect(outs.product()).toBe(1);
+  it('returns empty array when called without arguments', function () {
+    expect(outs.createArray()).to.deep.equal([]);
   });
 
 });
 
-describe('mergeConfig', function() {
+describe('createPerson', function () {
 
-  it('returns undefined when called without arguments', function() {
-    expect(outs.mergeConfig()).toBeUndefined();
-  });
-
-  it('returns the argument when called with just one', function() {
-    expect(outs.mergeConfig(42)).toBe(42);
-  });
-
-  it('returns the mergeConfigimum of all the arguments', function() {
-    expect(outs.mergeConfig(-1, -2, -3, -4, -5)).toBe(-1);
+  it('returns undefined when called without arguments', function () {
+    expect(outs.createPerson()).to.be.undefined;
   });
 
 });

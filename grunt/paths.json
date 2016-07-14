@@ -5,7 +5,7 @@
       "spec/**/*.spec.js"
     ],
     "spec": [
-      "spec/**"
+      "spec/**/*.spec.js"
     ],
     "lib": [
       "lib/**/*.js"
