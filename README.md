@@ -14,8 +14,10 @@
 
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-1.  Create a new branch, `training`, for your work.
-1.  Install dependencies with `npm install`.
+
+2.  Create a new branch, `training`, for your work.
+
+3.  Install dependencies with `npm install`.
 
 ## Introduction
 
@@ -27,7 +29,7 @@ By the end of this lesson, students should be able to:
 
 -   Create and invoke functions that take an arbitrary number of arguments
 -   Create and invoke functions that take reference types as arguments
--   Create and invoke functions that return objects
+-   Create and invoke functions that return reference types
 -   Create and invoke functions that take functions as arguments
 -   Create and invoke functions that return functions
 
