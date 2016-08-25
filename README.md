@@ -49,13 +49,23 @@ We'll examine how this object is used by creating some seemingly parameterless
 
 ```js
 const product = function product() {
+  let result = 1;
 
+  for (let i = 0; i < arguments.length; i++) {
+    result = result * arguments[i];
+  }
+
+  return result;
 };
 ```
 
 ##### Code along - `arguments`
 
 ```js
+// takes an arbitrary number of arguments (each arg
+// should be a number), finds the largest one, and
+// returns that member
+
 const max = function max() {
 
 };
@@ -74,15 +84,25 @@ Reference types passed as arguments can be modified within the functions.
 ##### Demo - reference type arguments
 
 ```js
+// Write a function that takes an array full of integers, doubles each value, and
+// returns a new array with those values.
 const arrayTimes2 = function arrayTimes2() {
+  let result = [];
 
+  for (let i = 0; i < arguments[0].length; i++) {
+    result[i] = arguments[0][i] * 2;
+  }
+
+  return result;
 };
 ```
 
 ##### Code along - reference type arguments
 
 ```js
-const addProperty = function addProperty() {
+const addProperty = function addProperty(obj, prop, val) {
+  // this function takes an object and adds a property
+  // to it
 
 };
 ```
@@ -90,7 +110,8 @@ const addProperty = function addProperty() {
 Functions are valid arguments.
 
 ```js
-const transform = function transform(value, predicate, mutator) {
+const transform = function (values, predicate, mutator) {
+  // if the predicate is true, mutate the value, otherwise don't mutate it
 
 };
 ```
@@ -106,7 +127,13 @@ Reference type literals returned from functions create new instances of the
 
 ```js
 const createArray = function createArray() {
+  let result = [];
 
+  for (let i = 0; i < arguments.length; i++) {
+    result[i] = arguments[i];
+  }
+
+  return result;
 };
 ```
 
@@ -119,7 +146,8 @@ replacement value should be the result of invoking the mutator on the existing
 element.
 
 ```js
-const arrayTransform = function arrayTransform() {
+const arrayTransform = function arrayTransform(array, predicate, mutator) {
+  // if the predicate is true, mutate the value, otherwise don't mutate it
 
 };
 ```
@@ -140,10 +168,13 @@ Closures provide great utility.
 ##### Demo - return new functions
 
 ```js
-const memoFactory = function memoFactory() {
+const memoFactory = function (rememberMe) {
+  let memo = rememberMe;
 
+  return function () {
+    return memo;
+  };
 };
-
 ```
 
 ##### Code along - return new functions
@@ -152,10 +183,9 @@ Functions returned from functions generate a closure.
 Closures provide great utility.
 
 ```js
-const counterFactory = function counterFactory() {
+const counterFactory = function(count) {
 
 };
-
 ```
 
 ## Additional Resources
