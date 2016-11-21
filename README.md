@@ -65,9 +65,15 @@ const product = function product() {
 // takes an arbitrary number of arguments (each arg
 // should be a number), finds the largest one, and
 // returns that member
-
-const max = function max() {
-
+Answer:
+const max = function () {
+  if(arguments.length === 0) {
+    return undefined;
+  } else if(arguments.length === 1) {
+    return arguments[0];
+  } else {
+    return Math.max.apply(null, arguments);
+  }
 };
 ```
 
@@ -103,6 +109,7 @@ const arrayTimes2 = function arrayTimes2() {
 const addProperty = function addProperty(obj, prop, val) {
   // this function takes an object and adds a property
   // to it
+  obj[prop] = val;
 
 };
 ```
@@ -112,7 +119,11 @@ Functions are valid arguments.
 ```js
 const transform = function (values, predicate, mutator) {
   // if the predicate is true, mutate the value, otherwise don't mutate it
-
+  values.forEach(function(value) {
+    if(predicate(vaue) === true) {
+      value.mutator();
+    }
+  });
 };
 ```
 
@@ -148,7 +159,15 @@ element.
 ```js
 const arrayTransform = function arrayTransform(array, predicate, mutator) {
   // if the predicate is true, mutate the value, otherwise don't mutate it
-
+  let transArray = [];
+  array.forEach(function(element) {
+    if(predicate(element) === true) {
+      transArray.push(element.mutator());
+    } else {
+      transArray.push(element);
+    }
+  });
+  return transArray;
 };
 ```
 
@@ -156,7 +175,14 @@ const arrayTransform = function arrayTransform(array, predicate, mutator) {
 
 ```js
 const createPerson = function createPerson(givenName, surname, bornOn, height, weight, eyeColor) {
-
+  return {
+    givenName: givenName,
+    surname: surname,
+    bornOn: bornOn,
+    height: height,
+    weight: weight,
+    eyeColor: eyeColor,
+  };
 };
 ```
 
@@ -184,7 +210,17 @@ Closures provide great utility.
 
 ```js
 const counterFactory = function(count) {
-
+  return {
+    increment: function () {
+      count += 1;
+    },
+    decrement: function () {
+      count -= 1;
+    },
+    value: function () {
+      return count;
+    },
+  };
 };
 ```
 
