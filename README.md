@@ -66,10 +66,16 @@ const product = function product() {
 // should be a number), finds the largest one, and
 // returns that member
 
-const max = function max() {
+const max = function max(1,2,3,4,5) {
+  let result = null;
 
+  for (let i = 0; i < arguments.length; i++) {
+    result = result * arguments [i];
+  }
+  return result;
 };
 ```
+1,2,3,4,5
 
 Could we accomplish something similar using a single argument?
 
@@ -101,9 +107,16 @@ const arrayTimes2 = function arrayTimes2() {
 
 ```js
 const addProperty = function addProperty(obj, prop, val) {
-  // this function takes an object and adds a property
-  // to it
+  this.obj=obj;
+  this.prop=prop;
+  this.val=val;
+  let result = [];
 
+  for (let i = 0; i <arguments[0].length; i++) {
+    result[i] = arguments[0][i] * 2;
+  }
+
+return result;
 };
 ```
 
