@@ -1,14 +1,21 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # JavaScript Functions - "Ins & Outs"
 
 ## Prerequisites
 
 -   [JavaScript Reference Types](https://github.com/ga-wdi-boston/js-reference-types)
+-   [JavaScript Functions - "Ins & Outs" - Study](https://github.com/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
 
-## Required Reading
+## Objectives
 
-[JavaScript Functions - "Ins & Outs" - Study](https://github.com/ga-wdi-boston/js-functions-ins-and-outs-study#readme)
+By the end of this lesson, students should be able to:
+
+-   Create and invoke functions that take an arbitrary number of arguments
+-   Create and invoke functions that take reference types as arguments
+-   Create and invoke functions that return reference types
+-   Create and invoke functions that take functions as arguments
+-   Create and invoke functions that return functions
 
 ## Preparation
 
@@ -22,16 +29,6 @@
 ## Introduction
 
 JavaScript function argument and return values
-
-## Objectives
-
-By the end of this lesson, students should be able to:
-
--   Create and invoke functions that take an arbitrary number of arguments
--   Create and invoke functions that take reference types as arguments
--   Create and invoke functions that return reference types
--   Create and invoke functions that take functions as arguments
--   Create and invoke functions that return functions
 
 ## "Ins & Outs"
 
