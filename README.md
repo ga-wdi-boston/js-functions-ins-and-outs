@@ -11,6 +11,7 @@
 
 By the end of this lesson, students should be able to:
 
+-   Use block scope to identify which variables are accessible in a function
 -   Create and invoke functions that take an arbitrary number of arguments
 -   Create and invoke functions that take reference types as arguments
 -   Create and invoke functions that return reference types
@@ -33,6 +34,210 @@ JavaScript function argument and return values
 ## "Ins & Outs"
 
 ### "Ins"
+
+#### Block scope
+
+Scope refers to where variables and functions are accessible.
+
+##### Demo - `global and local scope`
+
+Block scope means our different scopes are defined by blocks `{ }`.
+
+```js
+// I am not inside a block
+if (true) {
+  // i am inside a block
+}
+// I am not inside a block
+```
+
+*NOT* objects but blocks.
+```js
+if (true) {
+  // i am inside a block
+}
+
+let obj = {
+  prop1: "I am not inside a block",
+  prop2: "This is an object silly"
+}
+```
+
+The outter most scope is the `global scope` and all inner scopes are considered `local scopes`.
+
+```js
+// global scope
+if (true) {
+  // local scope
+}
+// global scope
+```
+
+Variables are accessible within the scope they are declared.
+
+```js
+// global scope
+if (true) {
+  // local scope
+  let x = 1;
+  console.log(x);  // 1
+}
+// global scope
+console.log(x);  // ReferenceError: x is not defined
+
+```
+
+They are accessible to any inner scopes (child scopes).
+
+```js
+
+// global scope
+let x = 1;
+
+if (true) {
+  // local scope
+  x = 2;
+  console.log(x);  // 2
+}
+// global scope
+console.log(x);  // 2
+
+```
+
+But not to the scopes above them (parent scopes).
+
+```js
+
+// global scope
+let x = 1;
+
+if (true) {
+  // local scope
+  let y = x;
+  console.log(y);  // 1
+}
+// global scope
+console.log(x);  // 1
+console.log(y);  // ReferenceError: y is not defined
+```
+
+Variables are not accessible from sibling scopes.
+
+```js
+
+if (true) {
+  // local scope of 1st sibling
+  let a = 1;
+  console.log(a) // 1
+}
+
+if (true) {
+  // local scope of 2nd sibling
+  console.log(a) // ReferenceError: a is not defined
+}
+
+```
+
+Different scopes can have variables that are declared with the same name and
+they do not conflict or know about each other.
+
+```js
+
+// global scope
+const x = 1;
+console.log(x);  // 1
+
+if (true) {
+  // local scope
+  const x = 2;
+  console.log(x);  // 2
+}
+// global scope
+console.log(x);  // 1
+```
+
+So that means a variable declared in the global scope is accessible by all of
+the scopes we create and a variable declared in a local scope is only accessible to
+itself and its child scopes.
+
+##### Code Along - `debugging variable scope`
+
+```js
+// global scope
+let a = 1;
+
+if (true) {
+  // local scope of 1st nested if statement
+  let b = 2;
+
+  if (true) {
+    // local scope of 2nd nested if statement
+    let c = 3;
+    console.log(a) // 1
+    console.log(b) // 2
+    console.log(c) // 3
+  }
+
+  // local scope of 1st nested if statement
+  console.log(a) // 1
+  console.log(b) // 2
+  console.log(c) // ReferenceError: c is not defined
+}
+
+// global scope
+console.log(a) // 1
+console.log(b) // ReferenceError: b is not defined
+console.log(c) // ReferenceError: c is not defined
+
+```
+
+Conditions are just 1 example of block scope.
+Loops are another example of block scope.
+
+```js
+
+while (true) {
+  let a = 1;
+  console.log(a); // 1
+}
+console.log(a); // ReferenceError: a is not defined
+```
+
+For Loops still have block scope even though the syntax is different.
+
+```js
+
+for (let i = 1; i < 2; i++) {
+  console.log(i); // 1
+}
+console.log(i); // ReferenceError: i is not defined
+```
+
+Functions are another example of block scope.
+
+```js
+
+const anyFunction = function() {
+  let a = 1
+  console.log(a); // 1
+};
+
+console.log(a); // ReferenceError: a is not defined
+
+```
+
+The scope of our parameters are within the function block as well
+
+```js
+
+const print = function(a) {
+  console.log(a);
+};
+
+print(1); // 1
+console.log(a); // ReferenceError: a is not defined
+
+```
 
 #### Zero or more arguments
 
