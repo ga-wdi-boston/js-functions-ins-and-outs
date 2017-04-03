@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
-const ins = require('../lib/ins.js');
+const ins = require('../lib/ins.js')
 
-const max = ins.max;
+const max = ins.max
