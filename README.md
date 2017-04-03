@@ -78,42 +78,42 @@ Variables are accessible within the scope they are declared.
 // global scope
 if (true) {
   // local scope
-  let x = 1;
-  console.log(x);  // 1
+  let x = 1  // what would happen if `var` were used instead?
+  console.log(x)  // 1
 }
 // global scope
-console.log(x);  // ReferenceError: x is not defined
+console.log(x)  // ReferenceError: x is not defined
 ```
 
 They are accessible to any inner scopes (child scopes).
 
 ```js
 // global scope
-let x = 1;
+let x = 1
 
 if (true) {
   // local scope
-  x = 2;
-  console.log(x);  // 2
+  x = 2
+  console.log(x)  // 2
 }
 // global scope
-console.log(x);  // 2
+console.log(x)  // 2
 ```
 
 But not to the scopes above them (parent scopes).
 
 ```js
 // global scope
-let x = 1;
+let x = 1
 
 if (true) {
   // local scope
-  let y = x;
-  console.log(y);  // 1
+  let y = x
+  console.log(y)  // 1
 }
 // global scope
-console.log(x);  // 1
-console.log(y);  // ReferenceError: y is not defined
+console.log(x)  // 1
+console.log(y)  // ReferenceError: y is not defined
 ```
 
 Variables are not accessible from sibling scopes.
@@ -121,7 +121,7 @@ Variables are not accessible from sibling scopes.
 ```js
 if (true) {
   // local scope of 1st sibling
-  let a = 1;
+  let a = 1
   console.log(a) // 1
 }
 
@@ -136,16 +136,16 @@ they do not conflict or know about each other.
 
 ```js
 // global scope
-const x = 1;
-console.log(x);  // 1
+const x = 1
+console.log(x)  // 1
 
 if (true) {
   // local scope
-  const x = 2;
-  console.log(x);  // 2
+  const x = 2
+  console.log(x)  // 2
 }
 // global scope
-console.log(x);  // 1
+console.log(x)  // 1
 ```
 
 So that means a variable declared in the global scope is accessible by all of
@@ -156,15 +156,15 @@ accessible to itself and its child scopes.
 
 ```js
 // global scope
-let a = 1;
+let a = 1
 
 if (true) {
   // local scope of 1st nested if statement
-  let b = 2;
+  let b = 2
 
   if (true) {
     // local scope of 2nd nested if statement
-    let c = 3;
+    let c = 3
     console.log(a) // 1
     console.log(b) // 2
     console.log(c) // 3
@@ -186,20 +186,20 @@ Conditions are just 1 example of block scope.
 Loops are another example of block scope.
 
 ```js
-while (true) {
-  let a = 1;
-  console.log(a); // 1
+while (true) { // don't run this
+  let a = 1
+  console.log(a) // 1
 }
-console.log(a); // ReferenceError: a is not defined
+console.log(a) // ReferenceError: a is not defined
 ```
 
 For Loops still have block scope even though the syntax is different.
 
 ```js
 for (let i = 1; i < 2; i++) {
-  console.log(i); // 1
+  console.log(i) // 1
 }
-console.log(i); // ReferenceError: i is not defined
+console.log(i) // ReferenceError: i is not defined
 ```
 
 Functions are another example of block scope.
@@ -207,21 +207,21 @@ Functions are another example of block scope.
 ```js
 const anyFunction = function() {
   let a = 1
-  console.log(a); // 1
-};
+  console.log(a) // 1
+}
 
-console.log(a); // ReferenceError: a is not defined
+console.log(a) // ReferenceError: a is not defined
 ```
 
 The scope of our parameters are within the function block as well
 
 ```js
 const print = function(a) {
-  console.log(a);
-};
+  console.log(a)
+}
 
-print(1); // 1
-console.log(a); // ReferenceError: a is not defined
+print(1) // 1
+console.log(a) // ReferenceError: a is not defined
 ```
 
 #### Functions with 0 arguments
@@ -231,10 +231,10 @@ to be passed arguments when they are called.
 
 ```js
 const printHello = function(){
-  console.log("Hello World");
+  console.log("Hello World")
 }
 
-printHello();
+printHello()
 ```
 
 #### Functions with 1 or more arguments
@@ -244,32 +244,32 @@ passed when called.
 
 ```js
 const subtract = function(num1, num2){
-  return num1 - num2;
+  return num1 - num2
 }
 
-subtract(2, 1); // 1
+subtract(2, 1) // 1
 ```
 
 The order of the arguments matter.
 
 ```js
 const subtract = function(num1, num2){
-  return num1 - num2;
+  return num1 - num2
 }
 
-subtract(1, 2); // -1
-subtract(2, 1); // 1
+subtract(1, 2) // -1
+subtract(2, 1) // 1
 ```
 
 The type of the arguments matter.
 
 ```js
 const add = function(num1, num2){
-  return num1 + num2;
+  return num1 + num2
 }
 
-add(1, 2); // 3
-add("cat", 1); // "cat1"
+add(1, 2) // 3
+add("cat", 1) // "cat1"
 ```
 
 It is up to the developer to know the order and type of arguments a function
@@ -281,16 +281,16 @@ which include objects, arrays, and functions.
 ```js
 // array
 const subtract = function(nums){
-  return nums[0] - nums[1];
+  return nums[0] - nums[1]
 }
 
 // number
 const add = function(num1, num2){
-  return num1 - num2;
+  return num1 - num2
 }
 
-subtract( [2, 1] ); // 1
-add( 2, 1 ); // 3
+subtract( [2, 1] ) // 1
+add( 2, 1 ) // 3
 ```
 
 In Javascript a function can accept an unlimited number of arguments since
@@ -304,11 +304,11 @@ used by creating some seemingly parameterless functions.
 ```js
 const print = function () {
   console.log(arguments[0])
-};
+}
 
-print(); // undefined
-print("cat"); // "cat"
-print(100, 200); // 100
+print() // undefined
+print("cat") // "cat"
+print(100, 200) // 100
 ```
 
 ##### Code along - `arguments`
@@ -320,7 +320,7 @@ print(100, 200); // 100
 
 const max = function () {
 
-};
+}
 ```
 
 Could we accomplish something similar using a single argument?
@@ -337,29 +337,29 @@ Reference types passed as arguments can be modified within the functions.
 ##### Demo - primitive data types as arguments
 
 ```js
-let num = 1;
+let num = 1
 
 const change = function (num) {
-  num++;
-  console.log(num);
-};
+  num++
+  console.log(num)
+}
 
-change(num); // 2
-console.log(num); // 1
+change(num) // 2
+console.log(num) // 1
 ```
 
 ##### Demo - reference types as arguments - arrays
 
 ```js
-let numbers = [1, 2, 3];
+let numbers = [1, 2, 3]
 
 const change = function (numbers) {
-  numbers.push(4);
-  console.log(numbers);
-};
+  numbers.push(4)
+  console.log(numbers)
+}
 
-change(numbers); // [1, 2, 3, 4]
-console.log(numbers); // [1, 2, 3, 4]
+change(numbers) // [1, 2, 3, 4]
+console.log(numbers) // [1, 2, 3, 4]
 ```
 
 ##### Demo - reference types as arguments - objects
@@ -368,15 +368,15 @@ console.log(numbers); // [1, 2, 3, 4]
 let person = {
   name: "Mike",
   age: 100
-};
+}
 
 const getOlder = function (person) {
-  person.age++;
-  console.log(person.age);
-};
+  person.age++
+  console.log(person.age)
+}
 
-getOlder(person); // 101
-console.log(person.age); // 101
+getOlder(person) // 101
+console.log(person.age) // 101
 ```
 
 ##### Code along - reference type arguments
@@ -387,7 +387,7 @@ const addProperty = function addProperty(obj, prop, val) {
   // this function takes an object and adds a property
   // to it
 
-};
+}
 ```
 
 #### Functions as arguments
@@ -397,19 +397,19 @@ A function that is passed to another function is called a callback.
 
 ```js
 const add = function (num1, num2){
-  return num1 + num2;
+  return num1 + num2
 }
 
 const subtract = function (num1, num2){
-  return num1 - num2;
+  return num1 - num2
 }
 
 const doMath = function (num1, num2, operation) {
   return operation(num1, num2)
-};
+}
 
-doMath(2,1, add); // 3
-doMath(2,1, subtract); // 1
+doMath(2,1, add) // 3
+doMath(2,1, subtract) // 1
 ```
 
 What is a callback?
@@ -422,16 +422,16 @@ A callback is a function that is passed to another function.
 Primitive data types returned are a new instance of the data type
 
 ```js
-let num = 1;
+let num = 1
 
 const increase = function (num) {
-  num++;
-  return num;
-};
+  num++
+  return num
+}
 
-let newNum = change(num);
-console.log(newNum); // 2
-console.log(num); // 1
+let newNum = change(num)
+console.log(newNum) // 2
+console.log(num) // 1
 ```
 
 #### Reference types as returns values
@@ -441,18 +441,18 @@ create new instances of that reference type.
 
 ```js
 const createArray = function () {
-  let result = [];
+  let result = []
 
   for (let i = 0; i < arguments.length; i++) {
-    result[i] = arguments[i];
+    result[i] = arguments[i]
   }
 
-  return result;
-};
+  return result
+}
 
-let outcome = createArray(1,2,false,true);
-console.log(outcome); // [1, 2, false, true]
-console.log(result); // ReferenceError: result is not defined
+let outcome = createArray(1,2,false,true)
+console.log(outcome) // [1, 2, false, true]
+console.log(result) // ReferenceError: result is not defined
 ```
 
  Reference types not declared within the function that are
@@ -460,20 +460,20 @@ console.log(result); // ReferenceError: result is not defined
  and not new instances.
 
  ```js
- let numbers = [1, 2, 3];
+ let numbers = [1, 2, 3]
 
  const change = function (numbers) {
-   numbers.push(4);
-   return numbers;
- };
+   numbers.push(4)
+   return numbers
+ }
 
- let newNumbers = change(numbers);
- console.log(newNumbers); // [1, 2, 3, 4]
- console.log(numbers); // [1, 2, 3, 4]
+ let newNumbers = change(numbers)
+ console.log(newNumbers) // [1, 2, 3, 4]
+ console.log(numbers) // [1, 2, 3, 4]
 
- newNumbers.push(5,6,7);
- console.log(newNumbers); // [1, 2, 3, 4, 5, 6, 7]
- console.log(numbers); // [1, 2, 3, 4, 5, 6, 7]
+ newNumbers.push(5,6,7)
+ console.log(newNumbers) // [1, 2, 3, 4, 5, 6, 7]
+ console.log(numbers) // [1, 2, 3, 4, 5, 6, 7]
 ```
 
 ##### Lab - reference types as arguments and return values
@@ -487,18 +487,18 @@ const studentOne = {
   name: "Mike",
   cheated: true,
   score: 100
-};
+}
 
 const studentTwo = {
   name: "Bernard",
   cheated: false,
   score: 90
-};
+}
 
-const students = [studentOne, studentTwo];
+const students = [studentOne, studentTwo]
 
 const deductForCheating = function(student){
-  student.score = student.score - 25;
+  student.score = student.score - 25
 }
 
 // write a callback that can be passed to runCheating Script
@@ -514,11 +514,11 @@ const runCheatingScript = function () {
   // if they cheated or not
   // then pass them as an argument to the correct callback
 
-};
+}
 
 // the function should get passed an array of students
 // and two callback functions
-runCheatingScript();
+runCheatingScript()
 ```
 
 ##### Code along  - return new objects
@@ -526,7 +526,7 @@ runCheatingScript();
 ```js
 const createPerson = function (givenName, surname, bornOn, height, weight, eyeColor) {
 
-};
+}
 ```
 
 #### Functions as returns values
@@ -538,15 +538,15 @@ Closures provide great utility.
 
 ```js
 const memoFactory = function (memo) {
-  let rememberMe = memo;
+  let rememberMe = memo
   return function () {
-    console.log(rememberMe);
-  };
-};
+    console.log(rememberMe)
+  }
+}
 
-let memoOne = memofactory("Hello World");
+let memoOne = memofactory("Hello World")
 
-memoOne(); // "Hello World"
+memoOne() // "Hello World"
 ```
 
 ##### Code along - return new functions
@@ -557,30 +557,30 @@ Closures provide great utility.
 ```js
 const counterFactory = function(count) {
 
-};
+}
 ```
 
 Combine the last two concepts and we can have a counting list of memos.
 
 ```js
 const memoFactory = function (memo) {
-  let total = 0;
+  let total = 0
 
   return function () {
-    total+= 1;
-    return total + ": " + memo;
-  };
-};
+    total+= 1
+    return total + ": " + memo
+  }
+}
 
-const memo = memoFactory();
+const memo = memoFactory()
 
 const entryMonday = memo("Monday was fun")
 const entryTuesday = memo("I liked Tuesday")
 const entryWednesday = memo("Ugh Wednesday")
 
-console.log(entryMonday); // "1: Monday was fun"
-console.log(entryTuesday); // "2: I liked Tuesday"
-console.log(entryWednesday); // "3: Ugh Wednesday"
+console.log(entryMonday) // "1: Monday was fun"
+console.log(entryTuesday) // "2: I liked Tuesday"
+console.log(entryWednesday) // "3: Ugh Wednesday"
 ```
 
 ## Additional Resources
