@@ -9,7 +9,7 @@
 
 ## Objectives
 
-By the end of this lesson, students should be able to:
+By the end of this talk, developers should be able to:
 
 -   Use block scope to identify which variables are accessible in a function
 -   Create and invoke functions that take an arbitrary number of arguments
@@ -479,47 +479,46 @@ console.log(result) // ReferenceError: result is not defined
 
 ##### Lab - reference types as arguments and return values
 
-Write a function that takes an array of students and a callback function
-Loops through the students to check if they cheated and if they did then
+Write a function that takes an array of developers and a callback function
+Loops through the developers to check if they cheated and if they did then
 applies the correct callback function to adjust their score.
 
 ```js
-const studentOne = {
+const developer = {
   name: "Mike",
-  cheated: true,
+  late: true,
   score: 100
 }
 
-const studentTwo = {
+const anotherDeveloper = {
   name: "Bernard",
-  cheated: false,
+  late: false,
   score: 90
 }
 
-const students = [studentOne, studentTwo]
+const developers = [developer, anotherDeveloper]
 
-const deductForCheating = function(student){
-  student.score = student.score - 25
+const deductForCheating = function (developer) {
+  developer.score = 0
 }
 
-// write a callback that can be passed to runCheating Script
-// it should have a parameter for a student object
-// and should +5 to their score
-const addForHonesty = function(){
+// write a callback that can be passed to runLateScript
+// it should have a parameter for a developer object
+// to note the late submission was early in the course
+const firstWeek = function () {
 }
 
-// the function should accept an array of students
+// the function should accept an array of developers
 // and two callback functions
-const runCheatingScript = function () {
-  // loop through the students array and check who cheated
-  // if they cheated or not
+const runLateScript = function () {
+  // loop through the developers array and check who was late
   // then pass them as an argument to the correct callback
 
 }
 
-// the function should get passed an array of students
+// the function should get passed an array of developers
 // and two callback functions
-runCheatingScript()
+runLateScript()
 ```
 
 ##### Code along  - return new objects
