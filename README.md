@@ -22,10 +22,8 @@ By the end of this lesson, students should be able to:
 
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
-
-2.  Create a new branch, `training`, for your work.
-
-3.  Install dependencies with `npm install`.
+1.  Create a new branch, `training`, for your work.
+1.  Install dependencies with `npm install`.
 
 ## Introduction
 
@@ -63,7 +61,8 @@ let obj = {
 }
 ```
 
-The outter most scope is the `global scope` and all inner scopes are considered `local scopes`.
+The outer most scope is the `global scope` and all inner scopes are considered
+`local scopes`.
 
 ```js
 // global scope
@@ -84,13 +83,11 @@ if (true) {
 }
 // global scope
 console.log(x);  // ReferenceError: x is not defined
-
 ```
 
 They are accessible to any inner scopes (child scopes).
 
 ```js
-
 // global scope
 let x = 1;
 
@@ -101,13 +98,11 @@ if (true) {
 }
 // global scope
 console.log(x);  // 2
-
 ```
 
 But not to the scopes above them (parent scopes).
 
 ```js
-
 // global scope
 let x = 1;
 
@@ -124,7 +119,6 @@ console.log(y);  // ReferenceError: y is not defined
 Variables are not accessible from sibling scopes.
 
 ```js
-
 if (true) {
   // local scope of 1st sibling
   let a = 1;
@@ -135,14 +129,12 @@ if (true) {
   // local scope of 2nd sibling
   console.log(a) // ReferenceError: a is not defined
 }
-
 ```
 
 Different scopes can have variables that are declared with the same name and
 they do not conflict or know about each other.
 
 ```js
-
 // global scope
 const x = 1;
 console.log(x);  // 1
@@ -157,8 +149,8 @@ console.log(x);  // 1
 ```
 
 So that means a variable declared in the global scope is accessible by all of
-the scopes we create and a variable declared in a local scope is only accessible to
-itself and its child scopes.
+the scopes we create and a variable declared in a local scope is only
+accessible to itself and its child scopes.
 
 ##### Code Along - `debugging variable scope`
 
@@ -188,14 +180,12 @@ if (true) {
 console.log(a) // 1
 console.log(b) // ReferenceError: b is not defined
 console.log(c) // ReferenceError: c is not defined
-
 ```
 
 Conditions are just 1 example of block scope.
 Loops are another example of block scope.
 
 ```js
-
 while (true) {
   let a = 1;
   console.log(a); // 1
@@ -206,7 +196,6 @@ console.log(a); // ReferenceError: a is not defined
 For Loops still have block scope even though the syntax is different.
 
 ```js
-
 for (let i = 1; i < 2; i++) {
   console.log(i); // 1
 }
@@ -216,27 +205,23 @@ console.log(i); // ReferenceError: i is not defined
 Functions are another example of block scope.
 
 ```js
-
 const anyFunction = function() {
   let a = 1
   console.log(a); // 1
 };
 
 console.log(a); // ReferenceError: a is not defined
-
 ```
 
 The scope of our parameters are within the function block as well
 
 ```js
-
 const print = function(a) {
   console.log(a);
 };
 
 print(1); // 1
 console.log(a); // ReferenceError: a is not defined
-
 ```
 
 #### Functions with 0 arguments
@@ -245,7 +230,6 @@ Some functions do not have parameters when they are defined and do not need
 to be passed arguments when they are called.
 
 ```js
-
 const printHello = function(){
   console.log("Hello World");
 }
@@ -255,8 +239,8 @@ printHello();
 
 #### Functions with 1 or more arguments
 
-Some functions define 1 or more parameters
-and expect 1 or more arguments to be passed when called.
+Some functions define 1 or more parameters and expect 1 or more arguments to be
+passed when called.
 
 ```js
 const subtract = function(num1, num2){
@@ -310,11 +294,10 @@ add( 2, 1 ); // 3
 ```
 
 In Javascript a function can accept an unlimited number of arguments since
-every function has an `arguments` object that is a mechanism to handle arguments not in the function
-definition.
-This object is referred to as `array like` and is available within any function.
-We'll examine how this object is used by creating some seemingly parameterless
-functions.
+every function has an `arguments` object that is a mechanism to handle
+arguments not in the function definition. This object is referred to as `array
+like` and is available within any function. We'll examine how this object is
+used by creating some seemingly parameterless functions.
 
 ##### Demo - `arguments`
 
@@ -344,7 +327,8 @@ Could we accomplish something similar using a single argument?
 
 ##### Lab - single array argument
 
-Write a function `maxOfArray` that takes an array of numbers and returns the max.
+Write a function `maxOfArray` that takes an array of numbers and returns the
+max.
 
 #### Reference types as arguments
 
@@ -412,7 +396,6 @@ Functions are valid arguments.
 A function that is passed to another function is called a callback.
 
 ```js
-
 const add = function (num1, num2){
   return num1 + num2;
 }
@@ -439,7 +422,6 @@ A callback is a function that is passed to another function.
 Primitive data types returned are a new instance of the data type
 
 ```js
-
 let num = 1;
 
 const increase = function (num) {
@@ -450,7 +432,6 @@ const increase = function (num) {
 let newNum = change(num);
 console.log(newNum); // 2
 console.log(num); // 1
-
 ```
 
 #### Reference types as returns values
@@ -502,7 +483,6 @@ Loops through the students to check if they cheated and if they did then
 applies the correct callback function to adjust their score.
 
 ```js
-
 const studentOne = {
   name: "Mike",
   cheated: true,
@@ -567,7 +547,6 @@ const memoFactory = function (memo) {
 let memoOne = memofactory("Hello World");
 
 memoOne(); // "Hello World"
-
 ```
 
 ##### Code along - return new functions
